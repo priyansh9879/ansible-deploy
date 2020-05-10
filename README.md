@@ -65,6 +65,10 @@
         
         [resolution]
         server1
+        server2
+       
+        [registry]
+        server1
         server2`**
 
 
