@@ -8,7 +8,23 @@
           name:
                - docker-ce
           skip_broken: yes
-          state: present 
+          state: present
+
+- name: Create a directory if it does not exist
+  file:
+          path: /opt/docker/
+          state: directory
+          mode: '0777'
+  ignore_errors: yes
+
+- name: Create a directory if it does not exist
+  file:
+          path: /opt/docker/wordpress/
+          state: directory
+          mode: '0777'
+  ignore_errors: yes
+
+
 - pip:
         name: docker
 - pip:
@@ -39,12 +55,6 @@
   docker_image:
           name: centos:latest
           source: pull
-
-          path: /opt/docker/wordpress
-          state: directory
-          owner: root
-          group: root
-          mode: 0755
  
 - name: Create docker-compose file
   template:
