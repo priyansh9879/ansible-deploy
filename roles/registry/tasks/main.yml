@@ -10,4 +10,31 @@
   copy: 
           src: docker-compose
           dest: /usr/local/bin/
-          mode: '0777'     
+          mode: '0777'    
+
+- docker_compose:
+        project_src: flask
+        state: absent
+- docker_compose:
+        project_name: flask
+        definition:
+          version: '2'
+          services:
+            db:
+              image: postgres
+            web:
+              build: "{{ playbook_dir }}/flask"
+              command: "python manage.py runserver 0.0.0.0:8000"
+              volumes:
+                - "{{ playbook_dir }}/flask:/code"
+              ports:
+                - "8000:8000"
+              depends_on:
+                - db
+  register: output
+- debug:
+        var: output
+- assert:
+        that:
+          - "web.flask_web_1.state.running"
+          - "db.flask_db_1.state.running" 

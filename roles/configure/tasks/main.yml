@@ -6,7 +6,7 @@
     path: /dvd
     state: directory
     mode: '0777'
-
+  ignore_errors: yes
 - name: Mount DVD read-only
   mount:
     path: /dvd
@@ -14,7 +14,7 @@
     fstype: iso9660
     opts: ro,noauto
     state: present
-
+  ignore_errors: yes
 - name: for local repo
   lineinfile:
              path: /root/Desktop/demo.txt
