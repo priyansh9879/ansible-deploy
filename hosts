@@ -9,7 +9,8 @@
 #   - A hostname/ip can be a member of multiple groups
 
 # Ex 1: Ungrouped hosts, specify before any group headers.
-
+[jenkinsservers]
+localhost
 ## green.example.com
 ## blue.example.com
 ## 192.168.100.1
