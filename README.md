@@ -18,8 +18,16 @@
 
        f) all you need to configure the roles according to your requirements.
 
-## 2. What are prequsites?
+       g) It will give you very simple commands to push and commit ( fast commit ) all you need is to configure some things for these commands to work easily.
 
+          Such as: 
+
+          1. ssh-key public key must be given of the user which will be used for pushing and pulling as well as commiting as 'fast commit'
+             
+             known bugs:
+                    - push will fail when there's unrelated history files on the remote repo.
+## 2. What are prequsites?
+```markdown
        a) Ansible must be installed.
       
        b) All the controlled nodes must have given ssh key access for login and don't require the passwords.
