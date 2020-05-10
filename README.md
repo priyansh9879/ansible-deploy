@@ -25,25 +25,25 @@
        b) All the controlled nodes must have given ssh key access for login and don't require the passwords.
 
        c) Controller node must have entry in thier host files with the alias for the remote nodes as the file is at /etc/hosts and entry should be like:
-       `127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+    ** `127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
         ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
         192.168.43.128 server1
         192.168.81.43  server2
-        192.168.97.84  server3`
+        192.168.97.84  server3` **
 ## 3. How to use?
 ```markdown
        1. Go to the inventory file ( hosts ) in your current directory:         
        To install jenkins: 
        a) Change your inventory file from such that:
-     **`[jenkinsservers]
-        localhost`**
+    ** `[jenkinsservers]
+        localhost` **
 
                    To
 
-     **`[jenkinsserver]
+    ** `[jenkinsserver]
         server1
         server2
-        server3`**
+        server3` **
 
 **Bold** and _Italic_ and `Code` text
 
