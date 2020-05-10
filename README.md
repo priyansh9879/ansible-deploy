@@ -24,10 +24,8 @@
 
 ## How to use?
 ```markdown
-       1. Go to the inventory file ( hosts ) in your current directory:
-         
-       To install jenkins:
- 
+       1. Go to the inventory file ( hosts ) in your current directory:         
+       To install jenkins: 
        a) Change your inventory file such that:
        `[jenkinsservers]
         localhost`
