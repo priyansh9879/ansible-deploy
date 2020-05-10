@@ -2,7 +2,7 @@
 
 ![Image](https://github.com/Chandrashekhars816/ansible-projects/blob/master/icons/ansible.png)
 
-##1. what this project does?
+## 1. what this project does?
 
 ~  This project does configure the following tasks:
 
@@ -18,7 +18,7 @@
 
        f) all you need to configure the roles according to your requirements.
 
-##2. What are prequsites?
+## 2. What are prequsites?
 
        a) Ansible must be installed.
       
@@ -30,7 +30,7 @@
         192.168.43.128 server1
         192.168.81.43  server2
         192.168.97.84  server3`
-##3. How to use?
+## 3. How to use?
 ```markdown
        1. Go to the inventory file ( hosts ) in your current directory:         
        To install jenkins: 
