@@ -66,6 +66,6 @@ Syntax highlighted code block
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 ### Contact
-![Image](https://cdn.iconscout.com/icon/free/png-256/ansible-282283.png")
+![Image](https://github.com/Chandrashekhars816/ansible-projects/blob/master/icons/ansible.png)
 
 Having trouble with using the project? Connect me on LinkedIn [Chandra Shekhar Sharma](https://www.linkedin.com/in/chandra-shekhar-s-a76b37158/) will help you sort it out. CIAO)/
