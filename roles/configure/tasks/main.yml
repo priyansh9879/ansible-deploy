@@ -16,4 +16,6 @@
           name:
                - docker-ce
                - jenkins
-          state: present
+               - java-1.8.0-openjdk
+          skip_broken: yes
+          state: present          
