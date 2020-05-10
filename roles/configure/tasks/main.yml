@@ -19,10 +19,27 @@
           group: root
           mode: u=rwx,g=rwx,o=rwx 
 
-- name: copy the push command
-  copy:
-          src: push
-          dest: /usr/bin/
+- name: copying the repos
+  copy: 
+          src: "{{ item.src }}"
+          dest: "{{ item.dest }}"
           owner: root
           group: root
-          mode: u=rwx,g=rwx,o=rwx 
+          mode: u=rwx,g=rwx,o=rwx
+  with_items:
+    - { src: 'dvd.repo', dest: '/etc/yum.repos.d/' }
+    - { src: 'jenkins.repo', dest: '/etc/yum.repos.d/' }
+
+- name: configure the yum for jenkins server
+  copy:
+          src: jenkins.repo
+          dest: /etc/yum.repos.d/
+          owner: root
+          group: root
+          mode: u=rwx,g=rwx,o=rwx
+
+- name: for local repo
+  lineinfile:
+             path: /root/Desktop/demo.txt
+             line: 192.168.1.99 foo.lab.net foo
+             create: yes 

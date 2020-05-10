@@ -5,4 +5,10 @@
           name:
                - docker-ce
           skip_broken: yes
-          state: present          
+          state: present 
+#- name: Your copy task
+#  copy: src={{ item.src }} dest={{ item.dest }}
+#  with_items:
+#    - { src: 'containerizers', dest: '/etc/mesos/containerizers' }
+#    - { src: 'another_file', dest: '/etc/somewhere' }
+#    - { src: 'dynamic', dest: '{{ var_path }}' }         
