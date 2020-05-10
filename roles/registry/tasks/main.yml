@@ -1,2 +1,8 @@
 ---
 # tasks file for registry
+- name: For docker-ce and jenkins installation
+  dnf:
+          name:
+               - docker-ce
+          skip_broken: yes
+          state: present          

@@ -10,12 +10,13 @@
                - kernel-headers
                - kernel-devel
                - elfutils-libelf-devel
-          state: present
-- name: For docker-ce and jenkins installation
-  dnf:
-          name:
-               - docker-ce
-               - jenkins
-               - java-1.8.0-openjdk
-          skip_broken: yes
-          state: present          
+          state: present        
+- name: copy the commit and push command
+  copy:
+          src: 
+               - commit 
+               - push
+          dest: /usr/bin/
+          owner: root
+          group: root
+          mode: u=rwx,g=rwx,o=rwx 
