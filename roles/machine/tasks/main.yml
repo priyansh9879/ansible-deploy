@@ -1,14 +1,5 @@
 ---
 # tasks file for machine
-- package:
-          name: 
-               - platform-python-devel
-               - gcc 
-               - perl
-               - make
-          state: present
-
-
 - pip:
       name:
            - numpy
