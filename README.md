@@ -4,16 +4,23 @@
 
 ~  This project does configure the following tasks:
 
-       a) install jenkins servers
+       a) install jenkins servers.
 
-       b) Rhel 8 iso yum configuration
+       b) Rhel 8 iso yum configuration.
 
-       c) pull the docker images that you want from the dockerhub ( only those that don't require you to login )
+       c) pull the docker images that you want from the dockerhub ( only those that don't require you to login ).
 
-       d) some additional tasks such and screen resolution inside virtualboxvm of rhel 8
+       d) some additional tasks such as screen resolution inside virtualbox vm of rhel 8.
  
+       e) It will also install jupyter and some python libraries used for machine learning projects.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+       f) all you need to configure the roles according to your requirements.
+
+## What are prequsites?
+
+       a) Ansible must be installed.
+      
+       b) All the controlled nodes must have given ssh key access for login and don't require the passwords.
 
 ### Markdown
 
