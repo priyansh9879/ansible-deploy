@@ -1,0 +1,12 @@
+---
+# tasks file for machine
+- tasks:
+        - pip:
+              name:
+                   - numpy
+                   - pandas
+                   - sckit-learn
+                   - folium
+                   - tensorflow
+                   - keras
+                   - matplotlib
