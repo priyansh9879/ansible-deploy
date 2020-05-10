@@ -1,5 +1,29 @@
 ---
 # tasks file for configure
+
+- name: Create a directory if it does not exist
+  file:
+    path: /dvd
+    state: directory
+    mode: '0777'
+
+- name: Mount DVD read-only
+  mount:
+    path: /dvd
+    src: /dev/cdrom
+    fstype: iso9660
+    opts: ro,noauto
+    state: present
+
+- name: for local repo
+  lineinfile:
+             path: /root/Desktop/demo.txt
+             line: "{{ item.line }}"
+             mode: u=rwx,g=rx,o=rx
+             create: yes
+  with_items:
+             - { line: 'mount /dev/cdrom /dvd' }
+
 - name: Required packages for guest additions installation 
   package:
           name:
@@ -37,9 +61,3 @@
           owner: root
           group: root
           mode: u=rwx,g=rwx,o=rwx
-
-- name: for local repo
-  lineinfile:
-             path: /root/Desktop/demo.txt
-             line: 192.168.1.99 foo.lab.net foo
-             create: yes 
