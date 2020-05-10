@@ -22,13 +22,23 @@
       
        b) All the controlled nodes must have given ssh key access for login and don't require the passwords.
 
+       c) Controller node must have entry in thier host files with the alias for the remote nodes as the file is at /etc/hosts and entry should be like:
+       `
+
 ## How to use?
 ```markdown
        1. Go to the inventory file ( hosts ) in your current directory:         
        To install jenkins: 
-       a) Change your inventory file such that:
+       a) Change your inventory file from such that:
        `[jenkinsservers]
         localhost`
+
+                   To
+
+       `[jenkinsserver]
+        server1
+        server2
+        server3`
          
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
