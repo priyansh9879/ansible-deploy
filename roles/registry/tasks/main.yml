@@ -40,14 +40,6 @@
           name: centos:latest
           source: pull
 
-- name: getting docker-compose ready
-  copy:
-          src: /root/Desktop/workspace/ansible/roles/registry/files/docker-compose.yml
-          dest: /root/Desktop/
-          mode: '0777'
-
-- name: Create docker/wordpress directory
-  file:
           path: /opt/docker/wordpress
           state: directory
           owner: root
