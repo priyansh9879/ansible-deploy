@@ -22,11 +22,20 @@
       
        b) All the controlled nodes must have given ssh key access for login and don't require the passwords.
 
-### Markdown
+## How to use?
+```markdown
+       1. Go to the inventory file ( hosts ) in your current directory:
+         
+       To install jenkins:
+ 
+       a) Change your inventory file such that:
+       `[jenkinsservers]
+        localhost`
+         
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
+
 Syntax highlighted code block
 
 # Header 1
