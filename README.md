@@ -43,7 +43,18 @@
      **`[jenkinsserver]
         server1
         server2
-        server3`**
+        server3
+
+        [machine]
+        server1
+        server2
+        
+        [resolution]
+        server1
+        server2`**
+
+
+       2. run the command `ansible-playbook setup.yml`
 ```
 ### Contact
 
