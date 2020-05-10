@@ -6,9 +6,8 @@
                - docker-ce
           skip_broken: yes
           state: present 
-#- name: Your copy task
-#  copy: src={{ item.src }} dest={{ item.dest }}
-#  with_items:
-#    - { src: 'containerizers', dest: '/etc/mesos/containerizers' }
-#    - { src: 'another_file', dest: '/etc/somewhere' }
-#    - { src: 'dynamic', dest: '{{ var_path }}' }         
+- name: Installing docker-compose
+  copy: 
+          src: docker-compose
+          dest: /usr/local/bin/
+          mode: '0777'     
