@@ -2,7 +2,7 @@
 
 ![Image](https://github.com/Chandrashekhars816/ansible-projects/blob/master/icons/ansible.png)
 
-1. what this project does?
+##1. what this project does?
 
 ~  This project does configure the following tasks:
 
@@ -18,7 +18,7 @@
 
        f) all you need to configure the roles according to your requirements.
 
-## What are prequsites?
+##2. What are prequsites?
 
        a) Ansible must be installed.
       
@@ -30,36 +30,20 @@
         192.168.43.128 server1
         192.168.81.43  server2
         192.168.97.84  server3`
-## How to use?
+##3. How to use?
 ```markdown
        1. Go to the inventory file ( hosts ) in your current directory:         
        To install jenkins: 
        a) Change your inventory file from such that:
-       `[jenkinsservers]
-        localhost`
+     **`[jenkinsservers]
+        localhost`**
 
                    To
 
-       `[jenkinsserver]
+     **`[jenkinsserver]
         server1
         server2
-        server3`
-         
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
+        server3`**
 
 **Bold** and _Italic_ and `Code` text
 
