@@ -1,12 +1,17 @@
 ---
 # tasks file for machine
-- tasks:
-        - pip:
-              name:
-                   - numpy
-                   - pandas
-                   - sckit-learn
-                   - folium
-                   - tensorflow
-                   - keras
-                   - matplotlib
+- package:
+          name: 
+               - platform-python-devel
+               - gcc 
+               - perl
+               - make
+          state: present
+
+
+- pip:
+      name:
+           - numpy
+           - pandas
+           - scikit-learn
+           - folium

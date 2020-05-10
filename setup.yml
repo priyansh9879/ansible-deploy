@@ -1,5 +1,6 @@
 - hosts: jenkinsservers
   roles:
+         - repo
          - configure
          - jenkins
-         -  
+         - machine 
