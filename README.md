@@ -74,6 +74,16 @@
 
        2. run the command `ansible-playbook setup.yml`
 ```
+## 4. How to browse your wordpress site on the container
+
+```markdown
+       1. Go to the terminal.
+       2. type command "ip addr"
+       3. notice your ip and the wordpress server is running on 8082 port.
+       4. Open your windows browser and type in url http://[the above step i.p.]:8082 
+       5. Well here goes your wordpress server deployed on the container
+```
+
 ### Contact
 
 **Having trouble with using the project? Connect me on LinkedIn [Chandra Shekhar Sharma](https://www.linkedin.com/in/chandra-shekhar-s-a76b37158/) will help you sort it out. CIAO)/**
