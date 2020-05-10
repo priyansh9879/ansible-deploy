@@ -1,6 +1,12 @@
 ## Welcome to Ansible project
 
-You can use the [editor on GitHub](https://github.com/Chandrashekhars816/ansible-projects/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+1. what this project does?
+~  This project does configure the following tasks:
+       a) install jenkins servers
+       b) Rhel 8 iso yum configuration
+       c) pull the docker images that you want from the dockerhub ( only those that don't require you to login )
+       d) some additional tasks such and screen resolution inside virtualboxvm of rhel 8
+ 
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
