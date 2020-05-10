@@ -1,21 +1,21 @@
+######### this is for the jenkins server
 - hosts: jenkinsservers
   roles:
          - repo
          - configure
          - jenkins
-         - machine 
-
+########### this is for the Rhel 8 vm at where you want to install guest additions ##############################
 - hosts: resolution
   roles:
          - repo
          - configure
-
+########### this is for the Ml models servers #################
 - hosts: machine
   roles:
          - repo
          - configure
          - machine 
-
+########### this is for the docker images registry ############
 - hosts: registry
   roles:
          - registry
