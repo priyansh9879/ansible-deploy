@@ -24,8 +24,10 @@
 
           1. ssh-key public key must be given of the user which will be used for pushing and pulling as well as commiting as 'fast commit'
              
-             known bugs:
+           **known bugs:
                     - push will fail when there's unrelated history files on the remote repo.
+
+                    - It will only push at master remote branch.**
 ## 2. What are prequsites?
 ```markdown
        a) Ansible must be installed.
