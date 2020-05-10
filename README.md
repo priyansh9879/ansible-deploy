@@ -1,9 +1,9 @@
 ## Welcome to Ansible project
-```markdown
+
 ![Image](https://github.com/Chandrashekhars816/ansible-projects/blob/master/icons/ansible.png)
 
 ## 1. what this project does?
-
+```markdown
 ~  This project does configure the following tasks:
 
        a) install jenkins servers.
@@ -28,6 +28,7 @@
                     - push will fail when there's unrelated history files on the remote repo.
 
                     - It will only push at master remote branch.**
+```
 ## 2. What are prequsites?
 ```markdown
        a) Ansible must be installed.
@@ -42,6 +43,7 @@
         192.168.97.84  server3`
       
      **d) It will only work in RHEL 8 version.**
+```
 ## 3. How to use?
 ```markdown
        1. Go to the inventory file ( hosts ) in your current directory:         
