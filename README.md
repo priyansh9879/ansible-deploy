@@ -24,8 +24,7 @@
 
        c) Controller node must have entry in thier host files with the alias for the remote nodes as the file is at /etc/hosts and entry should be like:
        `127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
-        ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
-
+        ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6`
 ## How to use?
 ```markdown
        1. Go to the inventory file ( hosts ) in your current directory:         
