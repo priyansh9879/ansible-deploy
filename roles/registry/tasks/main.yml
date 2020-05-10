@@ -1,6 +1,9 @@
 ---
 # tasks file for registry
 - name: For docker-ce and jenkins installation
+  command:
+          cmd: pwd
+- name: For docker-ce and jenkins installation
   dnf:
           name:
                - docker-ce
@@ -17,6 +20,21 @@
           dest: /usr/local/bin/
           mode: '0777'  
 
+- name: Masquerade
+  firewalld:
+          masquerade: yes
+          permanent: yes
+          immediate: yes
+          state: enabled
+
+- name: Redirect port 443 to 8443 with Rich Rule
+  firewalld:
+          rich_rule: rule family=ipv4 forward-port port=443 protocol=tcp to-port=8443
+          zone: public
+          permanent: yes
+          immediate: yes
+          state: enabled
+
 - name: Pull default Docker image
   docker_image:
           name: centos:latest
@@ -28,7 +46,23 @@
           dest: /root/Desktop/
           mode: '0777'
 
+- name: Create docker/wordpress directory
+  file:
+          path: /opt/docker/wordpress
+          state: directory
+          owner: root
+          group: root
+          mode: 0755
+ 
+- name: Create docker-compose file
+  template:
+          src: docker-compose.yml.j2
+          dest: /opt/docker/wordpress/docker-compose.yml
+          owner: root
+          group: root
+          mode: 0644
 
-- name: run the service defined in my docker-compose.yml
-  docker_compose:
-         project_src: /root/Desktop/docker-compose.yml
+- name: lauching my compose
+  shell: docker-compose up -d
+  args:
+          chdir: /opt/docker/wordpress/
