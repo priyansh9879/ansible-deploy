@@ -1,10 +1,15 @@
 ## Welcome to Ansible project
 
 1. what this project does?
+
 ~  This project does configure the following tasks:
+
        a) install jenkins servers
+
        b) Rhel 8 iso yum configuration
+
        c) pull the docker images that you want from the dockerhub ( only those that don't require you to login )
+
        d) some additional tasks such and screen resolution inside virtualboxvm of rhel 8
  
 
