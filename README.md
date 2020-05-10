@@ -1,5 +1,5 @@
 ## Welcome to Ansible project
-
+```markdown
 ![Image](https://github.com/Chandrashekhars816/ansible-projects/blob/master/icons/ansible.png)
 
 ## 1. what this project does?
