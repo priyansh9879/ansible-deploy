@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+echo "Fetching the refrence from the master"
+git fetch origin master
+echo "Pulling any additional files from the repo"
+git pull origin master
+echo "Pushing the repo to upstream"
+git push origin master
