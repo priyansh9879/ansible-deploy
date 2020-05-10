@@ -11,6 +11,15 @@
 # Ex 1: Ungrouped hosts, specify before any group headers.
 [jenkinsservers]
 localhost
+
+[machine]
+localhost
+
+[resolution]
+localhost
+
+[registry]
+localhost
 ## green.example.com
 ## blue.example.com
 ## 192.168.100.1

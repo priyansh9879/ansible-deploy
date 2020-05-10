@@ -1,7 +1,7 @@
 #!/usr/bin/bash
-echo "Fetching the refrence from the master"
+echo "Fetching the reference from the master"
 git fetch origin master
-echo "Pulling any additional files from the repo"
+echo "Updating the local repo to with the remote repo"
 git pull origin master
-echo "Pushing the repo to upstream"
+echo "Updating the remote repo with local one"
 git push origin master

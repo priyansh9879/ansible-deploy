@@ -11,11 +11,17 @@
                - kernel-devel
                - elfutils-libelf-devel
           state: present        
-- name: copy the commit and push command
+- name: copy the commit command
   copy:
-          src: 
-               - commit 
-               - push
+          src: commit
+          dest: /usr/bin/
+          owner: root
+          group: root
+          mode: u=rwx,g=rwx,o=rwx 
+
+- name: copy the push command
+  copy:
+          src: push
           dest: /usr/bin/
           owner: root
           group: root
