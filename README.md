@@ -30,6 +30,8 @@
         192.168.43.128 server1
         192.168.81.43  server2
         192.168.97.84  server3`
+      
+     **d) It will only work in RHEL 8 version.**
 ## 3. How to use?
 ```markdown
        1. Go to the inventory file ( hosts ) in your current directory:         
