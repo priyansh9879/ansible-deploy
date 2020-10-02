@@ -1,6 +1,4 @@
 ## Welcome to Ansible project
-## Welcome to Ansible project this is my First ansible project 
-
 ![Image](https://github.com/Chandrashekhars816/ansible-projects/blob/master/icons/ansible.png)
 
 ## 1. what this project does?
