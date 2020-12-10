@@ -3,25 +3,18 @@
 
 ## 1. what this project does?
 ```markdown
-~  This project does configure the following tasks:
-
-       a) install jenkins servers.
-
-       b) Rhel 8 iso yum configuration.
-
-       c) pull the docker images that you want from the dockerhub ( only those that don't require you to login ).
-
-       d) some additional tasks such as screen resolution inside virtualbox vm of rhel 8.
- 
-       e) It will also install jupyter and some python libraries used for machine learning projects.
-
-       f) all you need to configure the roles according to your requirements.
-
-       g) It will give you very simple commands to push and commit ( fast commit ) all you need is to configure some things for these commands to work easily.
-
-          Such as: 
-
-          1. ssh-key public key must be given of the user which will be used for pushing and pulling as well as commiting as 'fast commit'
+• Features:
+ - This project does configure the following tasks:
+ a) install jenkins servers.
+ b) Rhel 8 iso yum configuration.
+ c) pull the docker images that you want from the dockerhub ( only those that don't require you to login ).
+ d) some additional tasks such as screen resolution inside virtualbox vm of rhel 8.
+ e) It will also install jupyter and some python libraries used for machine learning projects.
+ f) all you need to configure the roles according to your requirements.
+ g) It will give you very simple commands to push and commit ( fast commit ) all you need is to configure
+ some things for these commands to work easily.
+ Such as:
+ > ssh-key public key must be given of the user which will be used for pushing and pulling as 'fast commit'
              
            **known bugs:
                     - push will fail when there's unrelated history files on the remote repo.
