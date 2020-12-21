@@ -1,12 +1,17 @@
 ---
 # tasks file for configure
 
+- name: Check File exists or not
+  stat: path=/dvd
+    register: status
+
 - name: Create a directory if it does not exist
   file:
     path: /dvd
     state: directory
     mode: '0777'
-  ignore_errors: yes
+  when: status.stat.exists == false
+
 - name: Mount DVD read-only
   mount:
     path: /dvd
@@ -15,6 +20,7 @@
     opts: ro,noauto
     state: present
   ignore_errors: yes
+
 - name: for local repo
   lineinfile:
              path: /root/Desktop/demo.txt
