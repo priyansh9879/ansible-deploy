@@ -1,6 +1,13 @@
 ## Welcome to Ansible project
 ![Image](https://github.com/Chandrashekhars816/ansible-projects/blob/master/icons/ansible.png)
 
+
+## How to use?
+```markdown
+> git clone https://github.com/Chandrashekhars816/ansible-deploy.git
+> cd ansible-deploy
+> bash ansibleinstall
+
 ## 1. what this project does?
 ```markdown
 • Features:
