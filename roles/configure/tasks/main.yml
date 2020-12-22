@@ -41,6 +41,7 @@
                - kernel-devel
                - elfutils-libelf-devel
           state: present        
+
 - name: copy the commit command
   copy:
           src: commit
