@@ -2,15 +2,21 @@
 # tasks file for configure
 
 - name: Check File exists or not
-  stat: path=/dvd
-    register: status
+  stat: 
+    path: /dvd
+  ignore_errors: yes
+  register: status
+
+- debug:
+    msg: "/dvd/ directory doesn't exist"
+  when: status.stat.islnk is not defined
 
 - name: Create a directory if it does not exist
   file:
     path: /dvd
     state: directory
     mode: '0777'
-  when: status.stat.exists == false
+  when: status.stat.islnk is not defined
 
 - name: Mount DVD read-only
   mount:

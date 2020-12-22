@@ -1,12 +1,11 @@
 ---
 # tasks file for registry
-- name: For docker-ce and jenkins installation
-  command:
-          shell: 'dnf install docker-ce-18.06* -y --nobest'
 
 - name: Check File exists or not
-  stat: path=/opt/docker/
-    register: status
+  stat: 
+          path: /opt/docker/
+  ignore_errors: yes
+  register: status
 
 - name: Create a directory if it does not exist
   file:
@@ -22,6 +21,12 @@
           mode: '0777'
   ignore_errors: yes
 
+- name: Installing docker-ce
+  copy:
+          src: dockerinstall.sh
+          dest: /opt/docker/
+          mode: '0777'
+
 - pip:
         name: docker
 
@@ -31,7 +36,7 @@
 - name: Installing docker-compose
   copy: 
           src: docker-compose
-          dest: /usr/local/sbin/
+          dest: /usr/bin/
           mode: '0777'  
 
 - name: Masquerade
@@ -49,14 +54,16 @@
           immediate: yes
           state: enabled
 
+- name: For docker-ce installation
+  shell: 'bash dockerinstall.sh'
+  args:
+          chdir: /opt/docker/
+  ignore_errors: yes
+
 - name: Pull default Docker image
   docker_image:
-          name: "{{ item.name }}"
+          name: centos
           source: pull
-  with_items:
-             - { line: 'centos:latest' }
-             - { line: 'nginx:latest' }
-             - { line: 'httpd:latest' }
  
 - name: Create docker-compose file
   template:
