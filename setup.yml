@@ -18,11 +18,11 @@
          - configure
          - registry
 ################################## this is for nfs server ####################################################################
-- hosts: nfs-server
-  roles:
-         - nfsserver
+#- hosts: nfs-server
+#  roles:
+#         - nfsserver
 ################################## this is for nfs client ####################################################################
-- hosts: nfs-client
-  roles:
-         - nfsclient
+#- hosts: nfs-client
+#  roles:
+#         - nfsclient
 ##################################### adding more features ( WIP ) ###########################################################

@@ -1,7 +1,6 @@
 ## Welcome to Ansible project
 ![Image](https://github.com/Chandrashekhars816/ansible-projects/blob/master/icons/ansible.png)
 
-
 ## How to use?
 ```markdown
 > git clone https://github.com/Chandrashekhars816/ansible-deploy.git
@@ -25,6 +24,7 @@
  f) all you need to configure the roles according to your requirements.
  g) It will give you very simple commands to push and commit ( fast commit ) all you need is to configure
  some things for these commands to work easily.
+ h) configures nfs server and client in remote system the configuration must be collocated to work properly ( WIP and still have bugs )
  Such as:
  > ssh-key public key must be given of the user which will be used for pushing and pulling as 'fast commit'
              
