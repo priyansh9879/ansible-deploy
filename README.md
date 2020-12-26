@@ -25,7 +25,7 @@
  g) It will give you very simple commands to push and commit ( fast commit ) all you need is to configure
  some things for these commands to work easily.
  h) configures nfs server and client in remote system the configuration must be collocated to work properly ( WIP and still have bugs )
- i) configures kubernetes main and worker node 
+ i) configures kubernetes main and worker node ( WIP and still have the bugs )
 
  Such as:
 > ssh-key public key must be given of the user which will be used for pushing and pulling as 'fast commit'
