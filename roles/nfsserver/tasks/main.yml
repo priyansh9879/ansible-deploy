@@ -8,29 +8,18 @@
        mode: 0777 
        owner: root 
        group: root
+  ignore_errors: yes
+  register: y
 
-- name: make sure the mount drive has a filesystem
-  filesystem: 
-       fstype: ext4 
-       dev: /dev/sdb
-
-- name: set mountpoints
-  mount: 
-       name: /share 
-       src: /dev/sdb
-       fstype: auto 
-       opts: defaults,nobootwait 
-       dump: 0 
-       passno: 2 
-       state: mounted
-
-- name: Ensure NFS utilities are installed.
-  apt: 
-       name: {{ item }} 
+- name: installing nfs server package
+  yum:
+       name: "{{ packages }}"
+  vars:
+       packages:
+               - nfs-utils
        state: present
-  with_items:
-        - nfs-common
-        - nfs-kernel-server
+  ignore_errors: yes
+  register: x
 
 - name: copy /etc/exports
   template: 
@@ -41,6 +30,6 @@
 
 - name: restart nfs server
   service: 
-       name: nfs-kernel-server 
+       name: nfs-server 
        state: restarted
 

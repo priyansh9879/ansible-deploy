@@ -13,18 +13,18 @@
 #         - configure                                                                                                       #
 #         - machine                                                                                                         #
 ################################## this is for the docker images registry ###################################################
-#- hosts: registry                                                                                                          #
-#  roles:                                                                                                                   #
-#         - configure                                                                                                       #
-#         - registry                                                                                                        #
+#- hosts: registry                                                                                                           #
+#  roles:                                                                                                                    #
+#         - configure                                                                                                        #
+#         - registry                                                                                                         #
 ################################## this is for nfs server ###################################################################
-#- hosts: nfs-server                                                                                                        #
-#  roles:                                                                                                                   #
-#         - configure                                                                                                       #
-#         - nfsserver                                                                                                       #
+- hosts: nfs-server                                                                                                         #
+  roles:                                                                                                                    #
+         - configure                                                                                                        #
+         - nfsserver                                                                                                        #
 ################################## this is for nfs client ###################################################################
-#- hosts: nfs-client                                                                                                        #
-#  roles:                                                                                                                   #
-#         - configure                                                                                                       #
-#         - nfsclient                                                                                                       #
+- hosts: nfs-client                                                                                                         #
+  roles:                                                                                                                    #
+         - configure                                                                                                        #
+         - nfsclient                                                                                                        #
 ##################################### adding more features ( WIP ) ##########################################################
